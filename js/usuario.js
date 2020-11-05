@@ -20,7 +20,7 @@
 
 function filtrar(){
     var valor =  document.getElementById("cmblancamento").value;
-    fetch("http://localhost:8080/lancamento/" + valor)
+    fetch(API + "/lancamento/" + valor)
         .then(res=>res.json())
         .then(res=>preencherMusicas(res))
         .catch(err => {

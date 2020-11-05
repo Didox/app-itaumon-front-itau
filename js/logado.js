@@ -61,7 +61,7 @@ function carregarDepartamentos(){
             }
     }
 
-    fetch("http://localhost:8080/departamento", cabecalho)
+    fetch(API + "/departamento", cabecalho)
         .then(res => res.json())
         .then(res => {
             localStorage.setItem("departamentos", JSON.stringify(res));
@@ -85,7 +85,7 @@ function atualizarUsuario(){
             }
     }
 
-    fetch("http://localhost:8080/colaborador/" + user.idColab, cabecalho)
+    fetch(API + "/colaborador/" + user.idColab, cabecalho)
         .then(res => res.json ())
         .then(res => {
             localStorage.setItem("user", JSON.stringify(res));
@@ -134,7 +134,7 @@ function solicitarMudanca(){
             }
     }
 
-    fetch("http://localhost:8080/colaborador/solicitarMudanca", cabecalho)
+    fetch(API + "/colaborador/solicitarMudanca", cabecalho)
     .then(res => res.json())    
     .then(res => {
            incluirHistorico(res)
@@ -166,7 +166,7 @@ function incluirHistorico( res ){
             }
     }
 
-    fetch("http://localhost:8080/historico/incluirHistorico", cabecalho)
+    fetch(API + "/historico/incluirHistorico", cabecalho)
     .then(res => res.json())    
     .then(res => {
             alert ("Solicitacao realizada!");

@@ -13,7 +13,7 @@ var cabecalho={
     }
 }
 
-fetch("http://localhost:8080/login", cabecalho)
+fetch(API + "/login", cabecalho)
     .then(res => res.json())
     .then(res => {alert(res.nome);
     })
